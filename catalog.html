@@ -28,21 +28,22 @@
 
                 <ul class="actions-list">
                     <li><a class="bookmarks-link" href="">Закладки: 0</a></li>
-                    <li><a class="basket-link" href="">Корзина: 0</a></li>
+                    <li><a class="basket-link red-flag" href="">Корзина: 10</a></li>
                     <li><a class="checkout-link" href="">Оформить заказ</a></li>
                 </ul>
             </div>
         </div>
         <div class="header-second-line">
             <div class="header-second-line-container">
-                <p class="header-text">
-                    Интернет-магазин
-                    строительных материалов
-                    и инструментов для ремонта
-                </p>
-                <div class="header-contacts">
-                    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                <div class="header-second-line-right">
+                    <p class="header-text">
+                        Интернет-магазин строительных материалов
+                        и&nbsp;инструментов для ремонта
+                    </p>
+                    <div class="header-contacts">
+                        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    </div>
                 </div>
                 <div class="user">
                     <ul class="user-profile-list">
@@ -113,7 +114,7 @@
                         <a href="">Каталог</a>
                     </li>
                     <li>
-                        <a href="">Инструменты</a>
+                        <a href="">Инструмент</a>
                     </li>
                     <li>
                         <a class="breadcrumbs-current" href="catalog.html">Перфораторы</a>
@@ -122,7 +123,9 @@
                 <h2 class="title-perforators">Перфораторы</h2>
                 <div class="columns-container">
                     <div class="filter">
-                        <h3>Фильтр:</h3>
+                        <div class="title-filter">
+                            <h3>Фильтр:</h3>
+                        </div>
                         <form action="https://echo.htmlacademy.ru" method="get">
 
                             <fieldset class="filter-price">
@@ -165,7 +168,7 @@
                                                 <path class="checkbox-on" fill="none"
                                                     d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
                                             </svg>
-                                            <span>Bosh</span>
+                                            <span>Bosch</span>
                                         </label>
                                     </li>
                                     <li>
@@ -266,17 +269,17 @@
                                 </ul>
                             </fieldset>
 
-                            <a class="filter-show" href="">Показать</a>
+                            <button class="filter-show" type="submit">Показать</button>
                         </form>
 
                     </div>
                     <div class="results">
                         <h3 class="visually-hidden">Список товаров</h3>
                         <div class="sorting-container">
-                            <h4>Сортировка:</h4>
+                            <h3>Сортировка:</h3>
                             <fieldset class="sorting-major">
                                 <input class="visually-hidden" type="radio" name="sorting-type" id="by-price"
-                                    value="by-price">
+                                    value="by-price" checked>
                                 <input class="visually-hidden" type="radio" name="sorting-type" id="by-type"
                                     value="by-type">
                                 <input class="visually-hidden" type="radio" name="sorting-type" id="by-function"
@@ -301,33 +304,34 @@
                             </fieldset>
 
                             <fieldset class="sorting-minor">
-                                <input class="visually-hidden" type="radio" name="sorting-direction" id="up" value="up">
-                                <input class="visually-hidden" type="radio" name="sorting-direction" id="down"
-                                    value="down">
                                 <ul>
                                     <li>
-                                        <label class="arrow" for="up">
+                                        <label class="arrow">
                                             По возрастанию
+                                            <input class="visually-hidden" type="radio" name="sorting-direction"
+                                                value="up">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"
                                                 viewBox="0 0 11 10">
-                                                <path id="up-path" fill="#c5c5c5" d="M5.5 0L0 10h11z" />
+                                                <path class="arrow-up" fill="#c5c5c5" d="M5.5 0L0 10h11z" />
                                             </svg>
                                         </label>
                                     </li>
                                     <li>
-                                        <label class="arrow" for="down">
+                                        <label class="arrow">
+                                            По убыванию
+                                            <input class="visually-hidden" type="radio" name="sorting-direction"
+                                                value="down">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"
                                                 viewBox="0 0 11 10">
-                                                <path id="down-path" fill="#c5c5c5" d="M5.5 10L0 0h11" />
+                                                <path class="arrow-down" fill="#c5c5c5" d="M5.5 10L0 0h11" />
                                             </svg>
-                                            По убыванию
                                         </label>
                                     </li>
                                 </ul>
                             </fieldset>
                         </div>
 
-                        <ul class="items-list">
+                        <ul class="items-list items-list-catalog-page">
                             <li>
                                 <div class="actions">
                                     <a class="buy" href="">Купить</a>
@@ -338,7 +342,7 @@
                                         alt="Перфоратор BOSCH BFG 3000">
                                 </div>
                                 <div class="title-item"> Перфоратор BOSCH BFG 3000</div>
-                                <div class="old-price">25500 Р.</div>
+                                <div class="old-price">22500 Р.</div>
                                 <div class="new-price">15500 Р.</div>
                             </li>
                             <li>
@@ -461,7 +465,7 @@
                                 <a class="pagination-item" href="">3</a>
                             </li>
                             <li>
-                                <a class="pagination-item" href="">Следующая</a>
+                                <a class="pagination-item pagination-next" href="">Следующая</a>
                             </li>
                         </ul>
                     </div>
@@ -490,10 +494,10 @@
     <footer class="footer">
         <div class="footer-first-line">
             <div class="container footer-anchor">
-                <a class="footer-logo" href="index.html">
+                <p class="footer-logo">
                     <img src="img/svg-technomart/logo-technomart.svg" width="138" height="23"
                         alt="Логотип интернет-магазина Техномарт">
-                </a>
+                </p>
                 <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                     <a class="footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
                 </p>
@@ -516,7 +520,7 @@
         <div class="footer-second-line">
             <div class="container footer-bottom">
                 <div class="copyright">
-                    <p>@ 2010-2019 Компания "Техномарт"</p>
+                    <p>@ 2010-2019 Компания «Техномарт»</p>
                     <p>Все права защищены</p>
                 </div>
 
@@ -548,31 +552,33 @@
                         </a>
                     </li>
                 </ul>
-
-                <p class="footer-container-email">
-                    Обратная связь:
-                    <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-                </p>
-                <p class="footer-container">
-                    Разработано -
-                    <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-                </p>
+                <ul class="developer">
+                    <li>
+                        Обратная связь:
+                        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                    </li>
+                    <li>
+                        Разработано -
+                        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
 
-    <section class="popup-container popup-basket popup-basket-not-show">
+    <section class="popup-container popup-basket">
         <h2 class="visually-hidden">Подтверждение заказа</h2>
         <p>Товар добавлен в корзину!</p>
         <div class="popup-basket-container">
-            <a class="popup-basket-link" href="">Оформить заказ</a>
-            <a class="popup-basket-link" href="">Продолжить покупки</a>
+            <a class="popup-basket-link pay" href="">Оформить заказ</a>
+            <a class="popup-basket-link continue" href="">Продолжить покупки</a>
         </div>
         <button class="modal-close" type="button">
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
 
+    <script src="../js/basket.js"></script>
 </body>
 
 </html>

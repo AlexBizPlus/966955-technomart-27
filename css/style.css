@@ -129,7 +129,7 @@ input[type='radio'].visually-hidden {
 }
 
 .user a,
-.user-profile-list {
+.user-profile-list li {
   color: #000000;
   /*меняем родной цвет ссылок*/
   background-color: #ffffff;
@@ -228,10 +228,11 @@ input[type='radio'].visually-hidden {
 .user-profile-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 
   margin: 0;
+  margin-left: auto;
   padding-left: 0;
 
   font-size: 21px;
@@ -2326,6 +2327,24 @@ fieldset.filter-power::before {
 
 @keyframes away {
   0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  30% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+/* @keyframes away {
+  0% {
     transform: translateY(-2000px);
   }
 
@@ -2340,7 +2359,7 @@ fieldset.filter-power::before {
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 .lost-message,
 .map {
@@ -2354,15 +2373,18 @@ fieldset.filter-power::before {
 .lost-message-show {
   display: block;
 
+  -webkit-animation: bounce forwards 0.6s;
   animation: bounce forwards 0.6s;
 }
 
 .modal-error {
+  -webkit-animation: shake 0.6s;
   animation: shake 0.6s;
 }
 
 .lost-message-hide {
-  animation: away reverse forwards 0.6s;
+  -webkit-animation: away forwards 0.6s;
+  animation: away forwards 0.6s;
 }
 
 .footer-first-line p {
@@ -2542,7 +2564,7 @@ p.footer-logo {
 }
 
 .slider-item::after {
-  content: "";
+  content: '';
 
   visibility: hidden;
 

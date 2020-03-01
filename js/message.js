@@ -47,8 +47,8 @@ messageLink.addEventListener('click', function (evt) {
 messageClose.addEventListener('click', function (evt) {
   evt.preventDefault();
   fly();
-  setTimeout(() => {
-    messagePopup.classList.remove('lost-message-show')
+  setTimeout(function () {
+    messagePopup.classList.remove('lost-message-show');
   }, 500);
 });
 
@@ -60,8 +60,8 @@ window.addEventListener('keydown', function (evt) {
 
     if (messagePopup.classList.contains('lost-message-show')) {
       fly();
-      setTimeout(() => {
-        messagePopup.classList.remove('lost-message-show')
+      setTimeout(function () {
+        messagePopup.classList.remove('lost-message-show');
       }, 500);
     }
   }

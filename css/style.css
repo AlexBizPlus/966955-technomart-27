@@ -2909,7 +2909,6 @@ p.footer-logo {
   left: 50%;
 
   width: 620px;
-  min-height: 282px;
 
   margin-top: -141px;
   margin-left: -310px;
@@ -2950,6 +2949,8 @@ p.footer-logo {
 }
 
 .popup-basket p {
+  min-height: 115px;
+
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 100px;
